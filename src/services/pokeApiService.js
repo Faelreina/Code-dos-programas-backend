@@ -1,4 +1,4 @@
-require('axios');
+const axios = require('axios');
 const config = require('../config');
 const { NotFoundError, ExternalApiError } = require('../utils/errors');
 
