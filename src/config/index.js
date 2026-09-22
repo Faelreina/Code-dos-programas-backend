@@ -14,3 +14,7 @@ module.exports = {
   cacheTtlMs: Number(process.env.CACHE_TTL_MS) || 3600000,
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:5173',
 };
+
+app.get('/', (req, res) => {
+  res.json({ message: "API da Pokédex está online!" });
+});
