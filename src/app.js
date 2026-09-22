@@ -23,3 +23,19 @@ module.exports = app;
 app.get('/', (req, res) => {
   res.json({ message: 'Servidor Pokédex Backend ativo!' });
 });
+
+app.use((req, res) => {
+  res.status(404).json({ 
+    error: `A rota ${req.method} ${req.path} não existe.` 
+  });
+});
+
+app.get('/', (req, res) => {
+ 
+  const { classId, assignmentId, submissionId } = req.query;
+
+  res.json({
+    status: 'OK',
+    classId: classId || null
+  });
+});
