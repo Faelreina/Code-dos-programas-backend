@@ -19,3 +19,7 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 module.exports = app;
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Servidor Pokédex Backend ativo!' });
+});
